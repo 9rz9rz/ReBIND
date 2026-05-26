@@ -236,8 +236,6 @@ def parse_args():
                         help='Sinkhorn entropy regularization')
     parser.add_argument('--inn_sinkhorn_iter', type=int, default=100,
                         help='max Sinkhorn iterations')
-    parser.add_argument('--inn_ortho_coef', type=float, default=0.01,
-                        help='coefficient for W_map orthogonal penalty')
     parser.add_argument('--inn_negative_slope', type=float, default=0.05,
                         help='negative slope for LeakyReLU in InvertibleSingleLayer')
 
