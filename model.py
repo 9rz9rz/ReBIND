@@ -223,7 +223,6 @@ class CIRModel(Blip2Base):
         self.inn_rho = None 
         self.inn_sinkhorn_reg = None
         self.inn_sinkhorn_iter = None
-        self.inn_ortho_coef = None
         self.inn_block_dim = None
         self.similarity_option = None
         self.aux_loss_option = None
@@ -559,7 +558,6 @@ class CIRModel(Blip2Base):
 
     @classmethod
     def from_config(cls, cfg):
-        vit_model = cfg.get("vit_model", "eva_clip_g")
         img_size = cfg.get("image_size")
         num_query_token = cfg.get("num_query_token")
         cross_attention_freq = cfg.get("cross_attention_freq", 2)
